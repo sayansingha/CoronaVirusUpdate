@@ -16,30 +16,44 @@ const useStyles = makeStyles({
 
 export default function Display(props) {
     const classes = useStyles();
+
+
+    const districts = Object.keys(props.districtTable || {})
+        .map((el) => ({
+            districtName: el,
+            confirmed: props.districtTable[el].confirmed,
+        }))
+
+
     return (
         <div>
         <TableContainer component={Paper}>
             <Table className={classes.table} aria-label="simple table">
                 <TableHead>
                 <TableRow>
-                    <TableCell>{props.politicalIdentity}</TableCell>
+                    <TableCell>DISTRICT NAME</TableCell>
                     <TableCell align="right">CONFIRMED</TableCell>
-                    <TableCell align="right">ACTIVE</TableCell>
-                    <TableCell align="right">RECOVERED</TableCell>
-                    <TableCell align="right">DECEASED</TableCell>
                 </TableRow>
                 </TableHead>
                 <TableBody>
                 
-                    <TableRow >
+                    {/* <TableRow >
                     <TableCell component="th" scope="row">
-                        <b>{props.state}</b>
+                        {props.districtName}
                     </TableCell>
-                    <TableCell align="right"><b>{props.confirmed}</b></TableCell>
-                    <TableCell align="right"><b>{props.active}</b></TableCell>
-                    <TableCell align="right"><b>{props.recovered}</b></TableCell>
-                    <TableCell align="right"><b>{props.deceased}</b></TableCell>
-                    </TableRow>
+                    <TableCell align="right">{props.confirmed}</TableCell>
+                    </TableRow> */}
+
+                    {districts.map((dist) => (
+                        <TableRow >
+                            <TableCell component="th" scope="row">
+                                <b>{dist.districtName}</b>
+                            </TableCell>
+                            <TableCell align="right"><b>{dist.confirmed}</b></TableCell>
+                        </TableRow>
+                    ))}
+
+
                 </TableBody>
             </Table>
             </TableContainer>
