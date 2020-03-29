@@ -8,22 +8,21 @@ var style = {
   backgroundColor: "#F8F8F8",
   borderTop: "1px solid #E7E7E7",
   textAlign: "center",
-  padding: 10,
+  padding: "5px",
   position: "fixed",
-
-  // left: "0",
-  // bottom: "0",
-  // height: "60px",
+  left: "0",
+  bottom: "0",
+  height: "20px",
   width: "100%",
 }
 
 var phantom = {
 display: 'block',
-padding: '20px',
-height: '60px',
-width: '100%',
+padding: '5px',
+height: '20px',
+width: '90%',
 }
-
+ 
 
 function App() {
   return (
@@ -31,14 +30,28 @@ function App() {
       <div>
         <Text/>
       </div>
-      {/* <footer style={style}>
-        <b>CREATED BY SAYAN SINGHA</b>
-        <br></br>
-        <b>email: sayansinghargj@gmail.com</b>
-      </footer> */}
+      {/* <div class="footer">
+        Created by:
+        <a href="https://github.com/sayansingha">
+          <img src="github.png" alt="github icon" height="15" width="15" />
+          Sayan
+        </a>
+      </div> */}
+
+        <div>
+            <div style={phantom} />
+            <div style={style}>
+            Created by:&nbsp; 
+              <a href="https://github.com/sayansingha">
+                <img src="github.png" alt="github icon" height="15" width="15" />
+                Sayan
+              </a>
+            </div>
+        </div>
     </div>
 
   );
 }
 
 export default App;
+//style="text-decoration: none; color: #0366d6; font-weight: bold"

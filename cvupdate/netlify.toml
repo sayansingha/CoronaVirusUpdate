@@ -1,0 +1,4 @@
+[build]
+base = "cvupdate/"
+publish = "cvupdate/build/"
+command = "npm run build"
