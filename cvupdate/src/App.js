@@ -42,9 +42,14 @@ function App() {
             <div style={phantom} />
             <div style={style}>
             Created by:&nbsp; 
-              <a href="https://github.com/sayansingha">
+              <a href="https://github.com/sayansingha"
+              style={{
+                textDecoration: "none",
+                color: "#0366d6",
+                fontWeight: "bold",
+              }}>
                 <img src="github.png" alt="github icon" height="15" width="15" />
-                Sayan
+                &nbsp;Sayan
               </a>
             </div>
         </div>
@@ -54,4 +59,3 @@ function App() {
 }
 
 export default App;
-//style="text-decoration: none; color: #0366d6; font-weight: bold"
