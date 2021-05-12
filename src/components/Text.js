@@ -51,8 +51,11 @@ submit(){
     if(this.obj){
         this.setState({switch: 1});
     }
+
     if(this.districtObj) {
         this.setState({switchDistrict: 1});
+    } else {
+      this.setState({switchDistrict: 0});
     }
 
 
